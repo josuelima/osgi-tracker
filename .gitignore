@@ -6,4 +6,5 @@
 *.ear
 
 .metadata
+.settings
 .DS_STORE
