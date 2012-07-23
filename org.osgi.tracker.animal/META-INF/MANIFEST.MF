@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Arrested
+Bundle-Name: Animal
 Bundle-SymbolicName: org.osgi.tracker.animal
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.osgi.tracker.animal.Activator
