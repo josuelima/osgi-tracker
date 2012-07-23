@@ -5,7 +5,7 @@ import java.io.IOException;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 import org.osgi.tracker.bus.external.IBus;
-import org.osgi.tracker.arrested.external.IArrested;
+import org.osgi.tracker.animal.external.IAnimal;
 import org.osgi.tracker.map.external.IMap;
 
 import javax.servlet.ServletException;
@@ -31,7 +31,7 @@ public class TrackerServlet extends HttpServlet {
 		throws ServletException, IOException {
 		
 		String busMapUrl = getBusMapUrl();
-		String arrestedMapUrl = getArrestedMapUrl();
+		String animalMapUrl = getAnimalMapUrl();
 		
 		String html = "";
 		
@@ -47,11 +47,11 @@ public class TrackerServlet extends HttpServlet {
 		}
 		
 		// Caso o presidiario ou serviço de mapa não esteja disponível		
-		if(arrestedMapUrl == null) {
-			html += "<li><b>Presidiario:</b> Serviço não disponível no momento</li>";
+		if(animalMapUrl == null) {
+			html += "<li><b>Animal:</b> Serviço não disponível no momento</li>";
 		} else {
-			html += "<li><b>Presidiario</b> <br>";
-			html += "<iframe style=\"height: 270px; width: 450px;\" src=\"" + arrestedMapUrl + "\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" scrolling=\"no\"></iframe></li>";
+			html += "<li><b>Animal</b> <br>";
+			html += "<iframe style=\"height: 270px; width: 450px;\" src=\"" + animalMapUrl + "\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" scrolling=\"no\"></iframe></li>";
 		}		
 		
 		// HTML FOOTER
@@ -74,14 +74,14 @@ public class TrackerServlet extends HttpServlet {
 		}
 	}
 	
-	// Busca as coordenadas do presidiario
-	private String getArrestedMapUrl() {
-		ServiceReference<?> ref = context.getServiceReference(IArrested.class.getName());
+	// Busca as coordenadas do animal
+	private String getAnimalMapUrl() {
+		ServiceReference<?> ref = context.getServiceReference(IAnimal.class.getName());
 		if(ref == null) {
 			return null;
 		} else {
-			IArrested arrestedService = (IArrested) context.getService(ref);
-			return getMapUrl(arrestedService.coordinates());
+			IAnimal animalService = (IAnimal) context.getService(ref);
+			return getMapUrl(animalService.coordinates());
 		}
 	}
 	

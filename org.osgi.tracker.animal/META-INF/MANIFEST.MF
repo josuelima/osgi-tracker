@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Arrested
-Bundle-SymbolicName: org.osgi.tracker.arrested
+Bundle-SymbolicName: org.osgi.tracker.animal
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: org.osgi.tracker.arrested.Activator
+Bundle-Activator: org.osgi.tracker.animal.Activator
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Import-Package: org.osgi.framework;version="1.3.0"
-Export-Package: org.osgi.tracker.arrested.external
+Export-Package: org.osgi.tracker.animal.external

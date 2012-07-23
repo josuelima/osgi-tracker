@@ -23,11 +23,8 @@ public class MapImpl implements IMap {
 		
 		/**
 		 * Aqui sera simulado que o Google Maps tem o limite de apenas 1 request
-		 * entao somente o primeiro mapa sera montado com google maps forcando que os
+		 * entao somente o primeiro mapa sera montado com google maps forcando que o
 		 * o servico seja trocado para o bingmaps
-		 * 
-		 * Isso simula que o servico de mapas pode ser facilmente trocado / alternado entre 
-		 * servicos de mapas diferentes (no caso Google Maps e Bing Maps)
 		 */		
 		
 		if(GOOGLE_MAPS_COUNTER < 1) {
