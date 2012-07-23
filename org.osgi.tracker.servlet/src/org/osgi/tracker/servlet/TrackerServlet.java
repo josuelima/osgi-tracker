@@ -70,7 +70,7 @@ public class TrackerServlet extends HttpServlet {
 			return null;
 		} else {
 			IBus busService = (IBus) context.getService(ref);
-			return getMapUrl(busService.coordinates());
+			return getMapUrl(busService.currentPosition());
 		}
 	}
 	
@@ -81,7 +81,7 @@ public class TrackerServlet extends HttpServlet {
 			return null;
 		} else {
 			IAnimal animalService = (IAnimal) context.getService(ref);
-			return getMapUrl(animalService.coordinates());
+			return getMapUrl(animalService.currentPosition());
 		}
 	}
 	
