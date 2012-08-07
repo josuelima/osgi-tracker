@@ -3,9 +3,8 @@
 This is a small project built on java using OSGI components.
 
 There are 2 trackable components (animal and bus). The servlet component gets the current
-position of each and mounts a map showing the object's location making use of the maps component (uses googlemaps or bing, that are also components).
+position of each and mounts a map showing the object's location making use of the maps component (uses googlemaps or bing, which are also components).
 
 I used {Apache Felix}[http://felix.apache.org/site/index.html] as server.
 
-===
 This project was developed during a software reuse discipline in my master degree course, just as an exercise to ilustrate how OSGI Components works. Don't take it seriously :)
