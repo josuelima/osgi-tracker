@@ -38,9 +38,9 @@ public class TrackerServlet extends HttpServlet {
 		// HTML HEADER
 		html += "<html><body><h1>Sistema de Rastreamento</h1><br><ul>";
 		
-		// Caso o onibus ou serviço de mapa não esteja disponível		
+		// Caso o onibus ou serviÁo de mapa não esteja disponível		
 		if(busMapUrl == null) {
-			html += "<li><b>Onibus:</b> Serviço não disponível no momento</li>";
+			html += "<li><b>Onibus:</b> ServiÁo não disponível no momento</li>";
 		} else {
 			html += "<li><b>Onibus</b> <br>";
 			html += "<iframe style=\"height: 270px; width: 450px;\" src=\"" + busMapUrl + "\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" scrolling=\"no\"></iframe></li>";
@@ -48,7 +48,7 @@ public class TrackerServlet extends HttpServlet {
 		
 		// Caso o presidiario ou serviço de mapa não esteja disponível		
 		if(animalMapUrl == null) {
-			html += "<li><b>Animal:</b> Serviço não disponível no momento</li>";
+			html += "<li><b>Animal:</b> ServiÁo não disponível no momento</li>";
 		} else {
 			html += "<li><b>Animal</b> <br>";
 			html += "<iframe style=\"height: 270px; width: 450px;\" src=\"" + animalMapUrl + "\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" scrolling=\"no\"></iframe></li>";
