@@ -8,3 +8,7 @@
 .metadata
 .settings
 .DS_STORE
+.class_path
+.project
+build.properties
+/META-INF
